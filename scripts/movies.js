@@ -3,8 +3,8 @@
 // so that you can retrive it on checkout.html page
 //let movies= document.getElementById("movies");
 //movies=document.getElementById("movies");
-var cartData =JSON.parse(localStorage.getItem("cart"))||[];
-console.log(cartData);
+//var cartData =JSON.parse(localStorage.getItem("cart"))||[];
+//console.log(cartData);
  function Search(){
    
     
@@ -46,23 +46,36 @@ function append(data){
      let=button=document.createElement("button")
      button.innerText="Book Movies"
      button.addEventListener("click",function(){
-         addToCart(data);
+         localStorage.setItem("name",data.Search[0].Title)
+         localStorage.setItem("image",data.Search[0].Poste)
+         //addToCart(data);
          alert("add movies")
+
          
      })
-     function addToCart(data){
-         cartData.push(data)
-         localStorage.setItem("cart",JSON.stringify(cartData));
+     div.append(name,image,button)
+    movies.append(div)
+     // function addToCart(data){
+       //  cartData.push(data)
+       //  localStorage.setItem("cart",JSON.stringify(cartData));
          
         
+       
      }
 
-    div.append(name,image,button)
-    movies.append(div)
+    
      
 
     
 
 
-}
+
+
+
+//var totalamount = JSON.parse(localStorage.getItem("total"))||[]
+
+    
+
+var showamount=document.getElementById("wallet")
+    showamount.innerText=localStorage.getItem("amount")
 
