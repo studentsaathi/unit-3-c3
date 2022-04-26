@@ -9,7 +9,7 @@
    
     
         const search=document.getElementById("search").value;
-        const url=`http://www.omdbapi.com/?s=${search}&page=tt3896198&apikey=c980f154`
+        const url=`https://www.omdbapi.com/?s=${search}&page=tt3896198&apikey=c980f154`
         fetch(url)
         .then(function(res){
           return res.json();
